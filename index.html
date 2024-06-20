@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IELTS Tutor</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>IELTS Tutor</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" id="login-link">Login</a></li>
+                    <li><a href="#" id="register-link">Register</a></li>
+                    <li><a href="#" id="history-link">History</a></li>
+                    <li><a href="#" id="logout-link">Logout</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section id="auth-section">
+                <div id="login-form" class="form-container">
+                    <h2>Login</h2>
+                    <form>
+                        <label for="login-email">Email:</label>
+                        <input type="email" id="login-email" required>
+                        <label for="login-password">Password:</label>
+                        <input type="password" id="login-password" required>
+                        <button type="submit">Login</button>
+                    </form>
+                </div>
+
+                <div id="register-form" class="form-container">
+                    <h2>Register</h2>
+                    <form>
+                        <label for="register-email">Email:</label>
+                        <input type="email" id="register-email" required>
+                        <label for="register-password">Password:</label>
+                        <input type="password" id="register-password" required>
+                        <button type="submit">Register</button>
+                    </form>
+                </div>
+            </section>
+
+            <section id="chat-section">
+                <div id="chat-container">
+                    <div id="chat-box"></div>
+                    <textarea id="essay-input" placeholder="Type your essay here..."></textarea>
+                    <button id="submit-essay">Submit</button>
+                </div>
+            </section>
+
+            <section id="history-section">
+                <h2>Submission History</h2>
+                <div id="history-list"></div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
