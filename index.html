@@ -5,61 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IELTS Tutor</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
 </head>
 <body>
-    <div id="app">
-        <header>
-            <h1>IELTS Tutor</h1>
-            <nav>
-                <ul>
-                    <li><a href="#" id="login-link">Login</a></li>
-                    <li><a href="#" id="register-link">Register</a></li>
-                    <li><a href="#" id="history-link">History</a></li>
-                    <li><a href="#" id="logout-link">Logout</a></li>
-                </ul>
-            </nav>
-        </header>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="images/icon.png" alt="icon">
+                IELTS Tutor
+            </div>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#essay-grading">Essay Grading</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#login" id="loginLink">Login</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <main>
-            <section id="auth-section">
-                <div id="login-form" class="form-container">
-                    <h2>Login</h2>
-                    <form>
-                        <label for="login-email">Email:</label>
-                        <input type="email" id="login-email" required>
-                        <label for="login-password">Password:</label>
-                        <input type="password" id="login-password" required>
-                        <button type="submit">Login</button>
-                    </form>
+    <main>
+        <section id="home" class="active">
+            <h1>Welcome to IELTS Tutor</h1>
+            <p>Improve your IELTS writing skills with our AI-powered essay grading system.</p>
+            <div>
+                <br> 📝 Write your essay in the "Essay Grading" section.<br><br>
+                <button id="get-started">Get Started</button>
+            </div>
+        </section>
+
+        <section id="essay-grading">
+            <h2>Essay Grading</h2>
+            <div id="chat-container">
+                <div id="chat-messages"></div>
+                <div id="chat-input">
+                    <textarea id="user-input" placeholder="Type your essay here..."></textarea>
+                    <button id="submit-essay">Submit Essay</button>
                 </div>
+            </div>
+            <br><br>
+        </section>
 
-                <div id="register-form" class="form-container">
-                    <h2>Register</h2>
-                    <form>
-                        <label for="register-email">Email:</label>
-                        <input type="email" id="register-email" required>
-                        <label for="register-password">Password:</label>
-                        <input type="password" id="register-password" required>
-                        <button type="submit">Register</button>
-                    </form>
-                </div>
-            </section>
+        <section id="history">
+            <h2>Submission History</h2>
+            <ul id="history-list"></ul>
+        </section>
 
-            <section id="chat-section">
-                <div id="chat-container">
-                    <div id="chat-box"></div>
-                    <textarea id="essay-input" placeholder="Type your essay here..."></textarea>
-                    <button id="submit-essay">Submit</button>
-                </div>
-            </section>
+        <section id="login">
+            <h2>Login</h2>
+            <form id="login-form">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+    </main>
 
-            <section id="history-section">
-                <h2>Submission History</h2>
-                <div id="history-list"></div>
-            </section>
-        </main>
-    </div>
+    <footer>
+        <p>&copy; Team pAlthon - 2024 IELTS Tutor. All rights reserved.</p>
+    </footer>
 
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
